@@ -1,0 +1,12 @@
+model:
+  type: GradientBoostingRegressor
+  params:
+    n_estimators: 100
+    learning_rate: 0.1
+
+data:
+  path: C://demofolder/deomofolder/data/Advertising.csv
+
+training:
+  test_size: 0.2
+  random_state: 42
