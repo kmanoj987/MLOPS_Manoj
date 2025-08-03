@@ -10,3 +10,7 @@ data:
 training:
   test_size: 0.2
   random_state: 42
+
+docker:
+  docker_images_path: /demofolder/deomofolder/docker_image1
+  docker_image_name: HelloMLOps
