@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/ankit_aj/Desktop/MLOPS-case_studies/Demo_050725_DVC/Skillfy_27_July/skillfy_morn_2707/skillfy_morn_2707/MLFLOW_demo/mlruns/145421630349174394/ba51dea241f244668abc3fd2c2dc69a5/artifacts
+end_time: 1755399450935
+entry_point_name: ''
+experiment_id: '145421630349174394'
+lifecycle_stage: active
+run_id: ba51dea241f244668abc3fd2c2dc69a5
+run_name: orderly-wolf-168
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755399440732
+status: 3
+tags: []
+user_id: ankit_aj

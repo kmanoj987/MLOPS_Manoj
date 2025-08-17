@@ -1,0 +1,6 @@
+artifact_location: file:///c:/Users/ankit_aj/Desktop/MLOPS-case_studies/Demo_050725_DVC/SKILLFY_21_JUNE_25/MLFLOW_demo/mlruns/660463186077294692
+creation_time: 1752341144465
+experiment_id: '660463186077294692'
+last_update_time: 1752341144465
+lifecycle_stage: active
+name: heart_disease_prediction_xgboost

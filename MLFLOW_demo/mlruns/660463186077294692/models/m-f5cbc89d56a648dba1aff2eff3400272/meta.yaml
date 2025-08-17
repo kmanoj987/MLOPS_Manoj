@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Users/ankit_aj/Desktop/MLOPS-case_studies/Demo_050725_DVC/SKILLFY_21_JUNE_25/MLFLOW_demo/mlruns/660463186077294692/models/m-f5cbc89d56a648dba1aff2eff3400272/artifacts
+creation_timestamp: 1752341144588
+experiment_id: '660463186077294692'
+last_updated_timestamp: 1752341149378
+model_id: m-f5cbc89d56a648dba1aff2eff3400272
+model_type: null
+name: xgboost_classifier
+source_run_id: 5e46932147014d2393b8b60bd5dbbd11
+status: 2
+status_message: null

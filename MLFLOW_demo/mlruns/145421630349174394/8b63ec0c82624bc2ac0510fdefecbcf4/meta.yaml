@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/ankit_aj/Desktop/MLOPS-case_studies/Demo_050725_DVC/Skillfy_27_July/skillfy_morn_2707/skillfy_morn_2707/MLFLOW_demo/mlruns/145421630349174394/8b63ec0c82624bc2ac0510fdefecbcf4/artifacts
+end_time: 1755398910637
+entry_point_name: ''
+experiment_id: '145421630349174394'
+lifecycle_stage: active
+run_id: 8b63ec0c82624bc2ac0510fdefecbcf4
+run_name: ambitious-boar-210
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755398892735
+status: 3
+tags: []
+user_id: ankit_aj

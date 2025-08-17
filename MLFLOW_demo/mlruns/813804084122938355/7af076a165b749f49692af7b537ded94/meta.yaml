@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/ankit_aj/Desktop/MLOPS-case_studies/Demo_050725_DVC/SKILLFY_21_JUNE_25/MLFLOW_demo/mlruns/813804084122938355/7af076a165b749f49692af7b537ded94/artifacts
+end_time: 1752339478794
+entry_point_name: ''
+experiment_id: '813804084122938355'
+lifecycle_stage: active
+run_id: 7af076a165b749f49692af7b537ded94
+run_name: marvelous-bird-19
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752339471527
+status: 3
+tags: []
+user_id: ankit_aj

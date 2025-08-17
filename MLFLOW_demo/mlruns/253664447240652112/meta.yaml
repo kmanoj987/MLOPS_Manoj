@@ -1,0 +1,7 @@
+artifact_location: file:///c:/Users/ankit_aj/Desktop/MLOPS-case_studies/Demo_050725_DVC/SKILLFY_21_JUNE_25/MLFLOW_demo/mlruns/253664447240652112
+creation_time: 1752338839893
+experiment_id: '253664447240652112'
+last_update_time: 1752339551758
+lifecycle_stage: active
+name: heart_disease_prediction_rf
+tags: {}

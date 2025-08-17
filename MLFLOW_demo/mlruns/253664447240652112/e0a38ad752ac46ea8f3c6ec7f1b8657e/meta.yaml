@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/ankit_aj/Desktop/MLOPS-case_studies/Demo_050725_DVC/SKILLFY_21_JUNE_25/MLFLOW_demo/mlruns/253664447240652112/e0a38ad752ac46ea8f3c6ec7f1b8657e/artifacts
+end_time: 1755320154687
+entry_point_name: ''
+experiment_id: '253664447240652112'
+lifecycle_stage: active
+run_id: e0a38ad752ac46ea8f3c6ec7f1b8657e
+run_name: worried-lark-485
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755320135120
+status: 3
+tags: []
+user_id: ankit_aj

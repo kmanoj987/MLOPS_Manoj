@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/ankit_aj/Desktop/MLOPS-case_studies/Demo_050725_DVC/SKILLFY_21_JUNE_25/MLFLOW_demo/mlruns/813804084122938355/dbf7084264614e6ebc8de36359660125/artifacts
+end_time: 1752339606119
+entry_point_name: ''
+experiment_id: '813804084122938355'
+lifecycle_stage: active
+run_id: dbf7084264614e6ebc8de36359660125
+run_name: awesome-croc-361
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752339599271
+status: 3
+tags: []
+user_id: ankit_aj

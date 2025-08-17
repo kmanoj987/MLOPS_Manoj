@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Users/ankit_aj/Desktop/MLOPS-case_studies/Demo_050725_DVC/SKILLFY_21_JUNE_25/MLFLOW_demo/mlruns/253664447240652112/models/m-21704fb0958b4e438aa0eb7fb4288ff1/artifacts
+creation_timestamp: 1752338840355
+experiment_id: '253664447240652112'
+last_updated_timestamp: 1752338850792
+model_id: m-21704fb0958b4e438aa0eb7fb4288ff1
+model_type: null
+name: model
+source_run_id: 2fd3bbc10f3946d5ae447ec4f3b85688
+status: 2
+status_message: null

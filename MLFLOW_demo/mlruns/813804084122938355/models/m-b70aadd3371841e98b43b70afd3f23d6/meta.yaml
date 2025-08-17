@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Users/ankit_aj/Desktop/MLOPS-case_studies/Demo_050725_DVC/SKILLFY_21_JUNE_25/MLFLOW_demo/mlruns/813804084122938355/models/m-b70aadd3371841e98b43b70afd3f23d6/artifacts
+creation_timestamp: 1752339471639
+experiment_id: '813804084122938355'
+last_updated_timestamp: 1752339478373
+model_id: m-b70aadd3371841e98b43b70afd3f23d6
+model_type: null
+name: decision_tree_classifier
+source_run_id: 7af076a165b749f49692af7b537ded94
+status: 2
+status_message: null

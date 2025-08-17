@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/ankit_aj/Desktop/MLOPS-case_studies/Demo_050725_DVC/SKILLFY_21_JUNE_25/MLFLOW_demo/mlruns/253664447240652112/6a7314fd59824a75967d38101ec6da4b/artifacts
+end_time: 1752339585378
+entry_point_name: ''
+experiment_id: '253664447240652112'
+lifecycle_stage: active
+run_id: 6a7314fd59824a75967d38101ec6da4b
+run_name: upset-cow-288
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752339574947
+status: 3
+tags: []
+user_id: ankit_aj

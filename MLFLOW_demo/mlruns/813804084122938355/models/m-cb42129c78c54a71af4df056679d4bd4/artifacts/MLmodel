@@ -1,0 +1,22 @@
+artifact_path: file:///c:/Users/ankit_aj/Desktop/MLOPS-case_studies/Demo_050725_DVC/SKILLFY_21_JUNE_25/MLFLOW_demo/mlruns/813804084122938355/models/m-cb42129c78c54a71af4df056679d4bd4/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.6
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+mlflow_version: 3.1.1
+model_id: m-cb42129c78c54a71af4df056679d4bd4
+model_size_bytes: 4575
+model_uuid: m-cb42129c78c54a71af4df056679d4bd4
+prompts: null
+run_id: dbf7084264614e6ebc8de36359660125
+utc_time_created: '2025-07-12 16:59:59.440087'

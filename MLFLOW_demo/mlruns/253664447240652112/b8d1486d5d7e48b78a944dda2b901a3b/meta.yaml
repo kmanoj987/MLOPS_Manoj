@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/ankit_aj/Desktop/MLOPS-case_studies/Demo_050725_DVC/SKILLFY_21_JUNE_25/MLFLOW_demo/mlruns/253664447240652112/b8d1486d5d7e48b78a944dda2b901a3b/artifacts
+end_time: 1755320439322
+entry_point_name: ''
+experiment_id: '253664447240652112'
+lifecycle_stage: active
+run_id: b8d1486d5d7e48b78a944dda2b901a3b
+run_name: rogue-boar-853
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755320422590
+status: 3
+tags: []
+user_id: ankit_aj

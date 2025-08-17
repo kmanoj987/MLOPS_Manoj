@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Users/ankit_aj/Desktop/MLOPS-case_studies/Demo_050725_DVC/SKILLFY_21_JUNE_25/MLFLOW_demo/mlruns/253664447240652112/models/m-9a5d1cb756494998a5ffae004026e06d/artifacts
+creation_timestamp: 1752338850993
+experiment_id: '253664447240652112'
+last_updated_timestamp: 1752338858325
+model_id: m-9a5d1cb756494998a5ffae004026e06d
+model_type: null
+name: random_forest_classifier
+source_run_id: 2fd3bbc10f3946d5ae447ec4f3b85688
+status: 2
+status_message: null
