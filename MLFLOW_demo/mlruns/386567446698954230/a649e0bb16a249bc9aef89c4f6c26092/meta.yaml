@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/ankit_aj/Desktop/MLOPS-case_studies/Demo_050725_DVC/Skillfy_27_July/skillfy_morn_2707/skillfy_morn_2707/MLFLOW_demo/mlruns/386567446698954230/a649e0bb16a249bc9aef89c4f6c26092/artifacts
+end_time: 1755399835447
+entry_point_name: ''
+experiment_id: '386567446698954230'
+lifecycle_stage: active
+run_id: a649e0bb16a249bc9aef89c4f6c26092
+run_name: redolent-mink-220
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755399825077
+status: 3
+tags: []
+user_id: ankit_aj

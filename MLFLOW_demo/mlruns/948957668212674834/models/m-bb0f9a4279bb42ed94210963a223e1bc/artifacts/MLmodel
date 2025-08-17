@@ -1,0 +1,22 @@
+artifact_path: file:///c:/Users/ankit_aj/Desktop/MLOPS-case_studies/Demo_050725_DVC/Skillfy_27_July/skillfy_morn_2707/skillfy_morn_2707/MLFLOW_demo/mlruns/948957668212674834/models/m-bb0f9a4279bb42ed94210963a223e1bc/artifacts
+flavors:
+  python_function:
+    data: model.xgb
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.12.6
+  xgboost:
+    code: null
+    data: model.xgb
+    model_class: xgboost.sklearn.XGBClassifier
+    model_format: xgb
+    xgb_version: 3.0.2
+mlflow_version: 3.1.1
+model_id: m-bb0f9a4279bb42ed94210963a223e1bc
+model_size_bytes: 107372
+model_uuid: m-bb0f9a4279bb42ed94210963a223e1bc
+prompts: null
+run_id: 6236e6c407414344bf4d2fd4283dd637
+utc_time_created: '2025-08-17 03:34:31.858538'
