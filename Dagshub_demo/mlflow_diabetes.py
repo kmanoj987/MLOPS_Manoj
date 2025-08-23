@@ -4,7 +4,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report
 import pickle
 
-data = './diabetes.csv'
+data = r'C:\Users\ankit_aj\Desktop\MLOPS-case_studies\Demo_050725_DVC\Skillfy_27_July\skillfy_morn_2707\skillfy_morn_2707\Dagshub_demo\diabetes.csv'
 df = pd.read_csv(data)
 df.shape
 
@@ -54,7 +54,7 @@ print(report_dict)
 
 
 import dagshub
-dagshub.init(repo_owner='edurekajuly24gcp', repo_name='dagshub-demo', mlflow=True)
+dagshub.init(repo_owner='edurekajuly24gcp', repo_name='skillfy_morn_2707', mlflow=True)
 
 
 import mlflow
