@@ -42,93 +42,17 @@ X_train = fill.fit_transform(X_train)
 X_test = fill.transform(X_test)
 
 
-#standardising the data
-scaler = StandardScaler()
-X_train = scaler.fit_transform(X_train)
-X_test = scaler.transform(X_test)
-
-
-# logistic regression
-
-# log_reg = LogisticRegression(max_iter=1000)
-# param_grid = {
-#     "penalty": ["l1", "l2", "elasticnet", "none"],  # Regularization types
-#     "C": [0.01, 0.1, 1, 10, 100],                  # Inverse regularization strength
-#     "solver": ["saga", "liblinear"],                # Solvers that support l1 & elasticnet
-#     "l1_ratio": [None, 0.2, 0.5, 0.8]               # Only used when penalty='elasticnet'
-# }
-
-# grid_search = GridSearchCV(
-#     estimator=log_reg,
-#     param_grid=param_grid,
-#     scoring="accuracy",
-#     cv=5,
-#     n_jobs=-1,
-#     verbose=2
-# )
-# grid_search.fit(X_train, y_train)
-
-# print("\nBest Parameters:", grid_search.best_params_)
-# print(f" Best Cross-Validation Accuracy: {grid_search.best_score_:.4f}")
-
-# best_model = grid_search.best_estimator_
-# y_pred = best_model.predict(X_test)
-
-
-# # for xgboost
-# Define XGBoost model
-xgb_clf = XGBClassifier(eval_metric="logloss", use_label_encoder=False, random_state=42)
-
-# Define parameter grid for GridSearchCV
-param_grid = {
-    "n_estimators": [100, 300, 500],
-    "max_depth": [3, 4, 5, 6],
-    "learning_rate": [0.01, 0.05, 0.1],
-    "subsample": [0.8, 0.9, 1.0],
-    "colsample_bytree": [0.7, 0.8, 1.0],
-    "gamma": [0, 1, 5],
-    "reg_lambda": [1, 2, 5],
-    "reg_alpha": [0, 0.1, 1]
+# Define the model hyperparameters
+params = {
+    "solver": "lbfgs",
+    "max_iter": 45,
+    "multi_class": "auto",
+    "random_state": 123,
 }
 
-# Set up GridSearchCV
-grid_search = GridSearchCV(
-    estimator=xgb_clf,
-    param_grid=param_grid,
-    scoring="accuracy",
-    cv=5,
-    n_jobs=-1,
-    verbose=0
-)
-
-grid_search.fit(X_train, y_train)
-
-# Get best parameters and accuracy
-best_params_xgb = grid_search.best_params_
-best_model = grid_search.best_estimator_
-y_pred = best_model.predict(X_test)
-
-# # Train the model
-
-# xgb_clf = xgb.XGBClassifier(**params)
-# xgb_clf.fit(X_train, y_train)# Predict on the test set
-# y_pred = xgb_clf.predict(X_test)
-
-#gradient boosting
-# params = {
-#     "n_estimators": 750,
-#     "learning_rate": 0.015,
-#     "max_depth": 6,
-#     "subsample": 0.7,
-#     "min_samples_split": 6,
-#     "min_samples_leaf": 2,
-#     'criterion':'squared_error',
-#     'ccp_alpha':0.005,
-#     'random_state': 42,
-# }
-
-# gbclf = GradientBoostingClassifier(**params)
-# gbclf.fit(X_train, y_train)
+# Train the model
+lr = LogisticRegression(**params)
+lr.fit(X_train, y_train)
 
 # y_pred = gbclf.predict(X_test)
 
