@@ -11,7 +11,7 @@ import mlflow
 import dagshub
 
 # Load and prepare data
-data = r'C:\Users\ankit_aj\Desktop\MLOPS-case_studies\Demo_050725_DVC\Skillfy_27_July\skillfy_morn_2707\skillfy_morn_2707\Dagshub_demo\diabetes.csv'
+data = r'Dagshub_demo\diabetes.csv'
 df = pd.read_csv(data)
 X = df.drop('Outcome', axis=1)
 y = df.Outcome
