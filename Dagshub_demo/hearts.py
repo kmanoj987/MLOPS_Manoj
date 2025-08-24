@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 
 data_path = r"data_sets1\heart.csv"
 
-dagshub.init(repo_owner='edurekajuly24gcp', repo_name='skillfy_morn_2707', mlflow=True)
+# dagshub.init(repo_owner='edurekajuly24gcp', repo_name='skillfy_morn_2707', mlflow=True)
 mlflow.set_experiment("Hearts_Experiment")
 
 df = pd.read_csv(data_path)
@@ -23,7 +23,7 @@ df = pd.read_csv(data_path)
 X = df.drop("target", axis=1)
 y = df["target"].astype(int)
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=10)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=42)
 
 #imputing
 fil = SimpleImputer(strategy="median")
@@ -36,9 +36,9 @@ X_test = scaler.transform(X_test)
 
 print(X_train.shape, X_test.shape)
 
-clf1 = RandomForestClassifier(n_estimators=600, max_depth=6, random_state=42)
-clf2 = GradientBoostingClassifier(n_estimators=700, learning_rate=0.002, random_state=42)
-clf3 = XGBClassifier(n_estimators=900, learning_rate=0.05, random_state=42, use_label_encoder=False, eval_metric="logloss")
+clf1 = RandomForestClassifier(n_estimators=20, max_depth=6, random_state=42)
+clf2 = GradientBoostingClassifier(n_estimators=15, learning_rate=0.002, random_state=42)
+clf3 = XGBClassifier(n_estimators=55, learning_rate=0.05, random_state=42, use_label_encoder=False, eval_metric="logloss")
 
 voting_clf = VotingClassifier(
     estimators=[("rf", clf1), ("gb", clf2), ("xgb", clf3)],
@@ -57,6 +57,8 @@ with mlflow.start_run(run_name="VotingClassifier_RF_GB_XGB"):
     # Evaluate metrics
     acc = accuracy_score(y_test, y_pred)
     report = classification_report(y_test, y_pred, output_dict=True)
+
+    print(report)
     # Log params of VotingClassifier
     mlflow.log_param("voting", "soft")
     mlflow.log_param("estimators", ["RandomForest", "GradientBoosting", "XGBoost"])
