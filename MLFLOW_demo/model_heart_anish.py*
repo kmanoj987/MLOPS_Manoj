@@ -1,0 +1,84 @@
+import numpy as np
+import pandas as pd
+from sklearn.metrics import classification_report
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import  StandardScaler
+from sklearn.ensemble import RandomForestClassifier
+
+file=r'/mnt/c/Users/anishp/Desktop/MY/MLOps/my_training/MLOps_training/Dagshub_demo/heart.csv'
+df=pd.read_csv(file)
+#print(df[df.isnull().any(axis=1)])
+
+if df.isnull().values.any():
+    print("Data contains null values.")
+else:
+    print("Data does not contain null values.")
+
+X=df.drop(['target'],axis=1)
+y=df['target']
+
+X_train , X_test , y_train , y_test = train_test_split(X, y, test_size = 0.30, random_state = 101)
+
+
+scaler=StandardScaler()
+X_train=scaler.fit_transform(X_train)
+X_test=scaler.transform(X_test)
+##DagesHub
+import dagshub
+dagshub.init(repo_owner='edurekajuly24gcp', repo_name='skillfy_morn_2707', mlflow=True)
+import mlflow
+import pickle
+
+
+### Model 
+
+params = {
+    "n_estimators":35,
+    "criterion": "gini",
+    "random_state": 42,
+}
+
+model=RandomForestClassifier(**params)
+model.fit(X_train,y_train)
+
+y_pred=model.predict(X_test)
+#print(classification_report(y_pred,y_test))
+report_dict = classification_report(y_test, y_pred, output_dict=True)
+
+mlflow.set_experiment("Heart_Disease")
+with mlflow.start_run():
+    mlflow.set_tag("author","Anish")
+    mlflow.log_params(params)
+    mlflow.log_metrics({
+        'accuracy': report_dict['accuracy'],
+        'recall_class_0': report_dict['0']['recall'],
+        'recall_class_1': report_dict['1']['recall'],
+        'f1_score_macro': report_dict['macro avg']['f1-score']
+    })
+    filename = 'Heart_anish.pkl'
+    pickle.dump(model, open(filename, 'wb'))
+    # Log the model file as an artifact
+    mlflow.log_artifact(filename, "Heart_anish")
+print(report_dict)
+
+# acc=[]
+# for i in range(1, 200):   # start from 1
+#     params = {
+#         "n_estimators": i,
+#         "criterion": "gini",
+#         "random_state": 42,
+#     }
+
+#     model = RandomForestClassifier(**params)
+#     model.fit(X_train, y_train)
+
+#     y_pred = model.predict(X_test)
+#     report_dict = classification_report(y_test, y_pred, output_dict=True)
+#     accuracy = report_dict['accuracy']
+#     acc.append(accuracy)
+
+
+
+
+# max_val=max(acc)
+# acc.index(max_val)
