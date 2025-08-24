@@ -13,14 +13,10 @@ import dagshub
 
 data_path = r"data_sets1\heart.csv"
 
-# data = r'Dagshub_demo\diabetes.csv'
 dagshub.init(repo_owner='edurekajuly24gcp', repo_name='skillfy_morn_2707', mlflow=True)
-# dagshub.init(repo_owner='edurekajuly24gcp', repo_name='skillfy_morn_2707', mlflow=True)
 mlflow.set_experiment("Hearts_Experiment")
-# mlflow.set_experiment("Multi_Classifier_Diabetes_Experiment")
 
 df = pd.read_csv(data_path)
-# print(df.head())
 
 X = df.drop("target", axis=1)
 y = df["target"].astype(int)
@@ -55,7 +51,6 @@ with mlflow.start_run(run_name="VotingClassifier_RF_GB_XGB"):
     # Evaluate metrics
     acc = accuracy_score(y_test, y_pred)
     report = classification_report(y_test, y_pred, output_dict=True)
-
     # Log params of VotingClassifier
     mlflow.log_param("voting", "soft")
     mlflow.log_param("estimators", ["RandomForest", "GradientBoosting", "XGBoost"])
@@ -69,12 +64,11 @@ with mlflow.start_run(run_name="VotingClassifier_RF_GB_XGB"):
     mlflow.log_metric("accuracy", acc)
     mlflow.log_metric("precision_macro", report["macro avg"]["precision"])
     mlflow.log_metric("recall_macro", report["macro avg"]["recall"])
-    mlflow.log_metric("f1_macro", report["macro avg"]["f1-score"])
+    mlflow.log_metric("f1_score_macro", report["macro avg"]["f1-score"])
     mlflow.log_metric("recall_class_1", report["1"]["recall"])
-
+    # 'f1_score_macro': report_dict['macro avg']['f1-score']
     # Save model as artifact
-    mlflow.sklearn.log_model(voting_clf, "VotingClassifier")
-
-    # Save the ensemble model
-    with open("voting_classifier.pkl", "wb") as f:
-        pickle.dump(voting_clf, f)
+    filename = r'Dagshub_demo\voting_classifier.pkl'
+    pickle.dump(voting_clf, open(filename, 'wb'))
+    #save as articfact
+    mlflow.log_artifact("voting_classifier.pkl", artifact_path="models")
