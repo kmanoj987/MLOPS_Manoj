@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/2025/personals/MLOPS/Instructors_collaborated/skillfy_morn_2707/mlruns/544350444329610878/228ae17b303644c6a200c3890ca9c86c/artifacts
+end_time: 1756006984428
+entry_point_name: ''
+experiment_id: '544350444329610878'
+lifecycle_stage: active
+run_id: 228ae17b303644c6a200c3890ca9c86c
+run_name: VotingClassifier_RF_GB_XGB
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756006982959
+status: 3
+tags: []
+user_id: satish.madugula
