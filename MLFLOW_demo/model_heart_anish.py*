@@ -65,5 +65,3 @@ print(report_dict)
 
 
 
-# max_val=max(acc)
-# acc.index(max_val)
