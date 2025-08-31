@@ -9,7 +9,7 @@ import dagshub
 import pickle
 
 
-dataset = '/Users/mj_peace/Desktop/MyMLOPS/WineClassification/winequality-red.csv'
+dataset = '/Users/manoj/Desktop/MLOPS/data_sets1/winequality-red.csv'
 df = pd.read_csv(dataset) 
 
 
@@ -57,11 +57,11 @@ with open('scaler.pkl', 'wb') as f:
 
 print("X_train and X_test scaled, and scaler saved to scaler.pkl")
 
-# from sklearn.impute import SimpleImputer
-# #impute with mean all 0 readings
-# imputer = SimpleImputer(missing_values = 0 , strategy ="mean") #fill = Imputer(missing_values = 0 , strategy ="mean", axis=0)
-# X_train = imputer.fit_transform(X_train_scaled)
-# X_test = imputer.transform(X_test_scaled)
+from sklearn.impute import SimpleImputer
+#impute with mean all 0 readings
+imputer = SimpleImputer(missing_values = 0 , strategy ="mean") #fill = Imputer(missing_values = 0 , strategy ="mean", axis=0)
+X_train = imputer.fit_transform(X_train_scaled)
+X_test = imputer.transform(X_test_scaled)
 
 from sklearn.model_selection import GridSearchCV
 
@@ -93,7 +93,7 @@ print("Best parameters found by GridSearchCV:", grid_search.best_params_)
 
 print("MLflow UI running at http://localhost:7001")
 with mlflow.start_run(run_name="random_forest_gridsearch"):
-    mlflow.set_tag("author", "MJPeace")
+    mlflow.set_tag("author", "Manoj")
     mlflow.set_tag("model_type", "random_forest_gridsearch")
     model = grid_search.best_estimator_
     print(model)
