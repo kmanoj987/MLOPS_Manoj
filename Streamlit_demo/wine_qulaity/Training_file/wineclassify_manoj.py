@@ -9,7 +9,7 @@ import dagshub
 import pickle
 
 
-dataset = '/Users/mj_peace/Desktop/MyMLOPS/WineClassification/winequality-red.csv'
+dataset = '/Users/manoj/Desktop/MLOPS/data_sets1/winequality-red.csv'
 df = pd.read_csv(dataset) 
 
 
@@ -93,7 +93,7 @@ print("Best parameters found by GridSearchCV:", grid_search.best_params_)
 
 print("MLflow UI running at http://localhost:7001")
 with mlflow.start_run(run_name="random_forest_gridsearch"):
-    mlflow.set_tag("author", "MJPeace")
+    mlflow.set_tag("author", "manoj")
     mlflow.set_tag("model_type", "random_forest_gridsearch")
     model = grid_search.best_estimator_
     print(model)
