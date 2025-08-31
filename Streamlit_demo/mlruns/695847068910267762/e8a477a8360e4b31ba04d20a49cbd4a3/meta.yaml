@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/manoj/Desktop/MLOPS/Streamlit_demo/mlruns/695847068910267762/e8a477a8360e4b31ba04d20a49cbd4a3/artifacts
+end_time: 1756610372814
+entry_point_name: ''
+experiment_id: '695847068910267762'
+lifecycle_stage: active
+run_id: e8a477a8360e4b31ba04d20a49cbd4a3
+run_name: random_forest_gridsearch
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756610372762
+status: 3
+tags: []
+user_id: manoj
