@@ -1,2 +1,5 @@
 [core]
     autostage = true
+    remote = gcsremote
+['remote "gcsremote"']
+    url = gs://winequality-aj
