@@ -1,4 +1,6 @@
-[core]
-    remote = localremote
-['remote "localremote"']
-    url = ../dvcstore
+
+    autostage = true
+    remote = gcsremote
+['remote "gcsremote"']
+    url = gs://winequality-aj
+
