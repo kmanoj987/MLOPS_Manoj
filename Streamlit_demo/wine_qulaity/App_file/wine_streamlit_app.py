@@ -4,8 +4,9 @@ import numpy as np
 import pickle
 
 # Load scaler and model
-scaler_path = r'C:\Users\manoj\Desktop\MLOPS\Streamlit_demo\wine_qulaity\Model_files\scaler.pkl'
-model_path = r'C:\Users\manoj\Desktop\MLOPS\wine_qulaity\Model_files\RandomForestClassifier(max_depth=10, n_estimators=50, random_state=42)_model.pkl'
+scaler_path = "/Users/manoj/Desktop/MLOPS/Streamlit_demo/scaler.pkl"
+model_path = "/Users/manoj/Desktop/MLOPS/Streamlit_demo/RandomForestClassifier(max_depth=10, n_estimators=50, random_state=42)_model.pkl"
+
 with open(scaler_path, 'rb') as f:
     scaler = pickle.load(f)
 with open(model_path, 'rb') as f:

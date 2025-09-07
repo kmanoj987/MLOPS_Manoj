@@ -52,10 +52,18 @@ from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
-with open('scaler.pkl', 'wb') as f:
+# Save scaler in Model_files/
+with open("/Users/manoj/Desktop/MLOPS/Streamlit_demo/scaler.pkl", "wb") as f:
     pickle.dump(scaler, f)
 
-print("X_train and X_test scaled, and scaler saved to scaler.pkl")
+# Save trained model in Model_files/
+model_filename = "/Users/manoj/Desktop/MLOPS/Streamlit_demo/RandomForestClassifier(max_depth=10, n_estimators=50, random_state=42)_model.pkl"
+with open(model_filename, "wb") as f:
+    pickle.dump(model_filename, f)
+
+print(f"✅ Model saved to {model_filename}")
+print("✅ Scaler saved to Streamlit_demo/wine_qulaity/Model_files/scaler.pkl")
+
 
 # from sklearn.impute import SimpleImputer
 # #impute with mean all 0 readings
